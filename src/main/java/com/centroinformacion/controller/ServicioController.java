@@ -8,28 +8,25 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-import com.centroinformacion.entity.GiftCard;
-import com.centroinformacion.service.GiftCardServices;
-
-
+import com.centroinformacion.entity.Servicio;
+import com.centroinformacion.service.ServicioServices;
 
 @RestController
-@RequestMapping("/url/giftcard")
-public class GiftCardController {
-	
+@RequestMapping("/url/servicio")
+public class ServicioController {
+
 	@Autowired
-	private GiftCardServices repo;
+	private ServicioServices repo;
 	
 	@GetMapping("/lista")
-	public List<GiftCard> listaGiftCard(){
-		List<GiftCard> lstSalida = repo.listarGiftCard();
+	public List<Servicio> listaServicio(){
+		List<Servicio> lstSalida = repo.listarServicios();
 		return lstSalida;
 	}
 	
 	@PostMapping("/registrar")
 	@ResponseBody
-	public GiftCard registrarGiftCard(@RequestBody GiftCard gf) {
-		return repo.registrarGiftCard(gf);
+	public Servicio registrarServicio(@RequestBody Servicio s) {
+		return repo.registrarServicio(s);
 	}
-	
 }

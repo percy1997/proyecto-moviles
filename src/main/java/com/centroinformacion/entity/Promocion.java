@@ -16,30 +16,30 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "giftcard")
-public class GiftCard {
+@Table(name = "promociones")
+public class Promocion {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "cod_gif")
-	private Integer codigoGift;
+	@Column(name = "cod_pro")
+	private Integer codigoPromocion;
 	
-	@Column(name = "nom_gid")
-	private String nombreGift;
+	@Column(name = "nom_pro")
+	private String nombrePromocion;
 	
-	@Column(name = "des_gif")
-	private String descripcionGift;
+	@Column(name = "des_pro")
+	private String descripcionPromocion;
 	
-	@Column(name = "mon_gif")
-	private double montoGift;
+	@Column(name = "mon_pro")
+	private double montoPromocion;
 	
 	@Column(name = "imagen")
-	private String imagenGift;
+	private String imagenPromocion;
 	
 	@Column(name = "fecha")
-	private String fechaGift;	
+	private String fechaPromocion;	
 	
 	@ManyToOne
-	@JoinColumn(name="cod_tipg")
-	private TipoGift tipoGift;
+	@JoinColumn(name="cod_tip")
+	private TipoPromocion tipoPromo;
 }
