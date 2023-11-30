@@ -21,4 +21,13 @@ public class PromocionServices {
 	public Promocion registrarPromocion(Promocion p) {
 		return repo.save(p);
 	}
+	
+	//buscar
+	public Promocion buscarPromocion(int cod) {
+		return repo.findById(cod).orElse(null);
+	}
+	
+	public void eliminarPromocion(int cod) {
+		repo.deleteById(cod);
+	}
 }
