@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import com.centroinformacion.dao.GiftCardRepository;
 import com.centroinformacion.entity.GiftCard;
-import com.centroinformacion.entity.Promocion;
 
 @Service
 public class GiftCardServices {
@@ -25,7 +24,6 @@ public class GiftCardServices {
 		return repo.save(gc);
 	}
 	
-	//buscar
 	public GiftCard buscarGiftCard(int cod) {
 		return repo.findById(cod).orElse(null);
 	}

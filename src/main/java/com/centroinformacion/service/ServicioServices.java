@@ -21,4 +21,9 @@ public class ServicioServices {
 	public Servicio registrarServicio(Servicio s) {
 		return repo.save(s);
 	}
+	
+	//buscar
+		public Servicio buscarServicio(int cod) {
+			return repo.findById(cod).orElse(null);
+		}
 }

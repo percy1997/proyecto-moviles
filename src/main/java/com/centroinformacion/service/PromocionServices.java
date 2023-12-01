@@ -27,6 +27,7 @@ public class PromocionServices {
 		return repo.findById(cod).orElse(null);
 	}
 	
+	//eliminar
 	public void eliminarPromocion(int cod) {
 		repo.deleteById(cod);
 	}

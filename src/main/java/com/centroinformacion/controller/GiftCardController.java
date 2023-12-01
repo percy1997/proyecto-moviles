@@ -11,10 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.centroinformacion.dao.GiftCardRepository;
 import com.centroinformacion.entity.GiftCard;
-import com.centroinformacion.entity.Promocion;
 import com.centroinformacion.service.GiftCardServices;
 
 
